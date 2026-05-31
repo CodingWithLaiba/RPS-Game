@@ -1,12 +1,12 @@
 // import { useState } from 'react'
-
+import ScoreBoard from './components/ScoreBoard'
 
 function App() {
  
 
   return (
     <>
-    <div className="bg-gray-200"> Hello</div>
+    <ScoreBoard />
     </>
   )
 }
