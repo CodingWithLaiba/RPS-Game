@@ -1,14 +1,14 @@
 // import { useState } from 'react'
-import ScoreBoard from './components/ScoreBoard'
+import ScoreBoard from "./components/ScoreBoard";
 
 function App() {
- 
-
   return (
     <>
-    <ScoreBoard />
+      <div className="">
+        <ScoreBoard score={12} />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
