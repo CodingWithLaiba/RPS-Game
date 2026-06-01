@@ -8,7 +8,7 @@ function App() {
       <div className="">
         <ScoreBoard score={12} />
       </div>
-      <div>
+      <div className="flex justify-center mt-20">
         <GameBoard />
       </div>
     </>
