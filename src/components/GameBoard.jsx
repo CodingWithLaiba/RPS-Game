@@ -3,6 +3,7 @@ import paper from "../assets/images/icon-paper.svg";
 import scissors from "../assets/images/icon-scissors.svg";
 import lizard from "../assets/images/icon-lizard.svg";
 import spock from "../assets/images/icon-spock.svg";
+import pentagon from "../assets/images/bg-pentagon.svg";
 import GameChoice from "./GameChoice"
 export default function GameBoard() {
   const choices = [
@@ -37,20 +38,34 @@ export default function GameBoard() {
     position: "top-[100px] left-0",
   },
 ];
-  return (
-    <div className="flex flex-wrap justify-center gap-8">
-      {choices.map((choice) => (
-        
+  const handleSelect = (choice) => {
+  console.log(choice);
+};
+
+return (
+  <div className="relative w-500 h-450">
+    
+    <img
+      src={pentagon}
+      alt="pentagon"
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    />
+
+    {choices.map((choice) => (
+      <div
+        key={choice.type}
+        className={`absolute ${choice.position}`}
+      >
         <GameChoice
-          key={choice.type}
           type={choice.type}
           icon={choice.icon}
           borderColor={choice.borderColor}
-          onSelect={(selectedChoice) => console.log(selectedChoice)}
+          onSelect={handleSelect}
         />
-      ))}
-    </div>
-  )
+      </div>
+    ))}
+  </div>
+);
 }
 
   
