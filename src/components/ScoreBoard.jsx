@@ -5,6 +5,8 @@ export default function ScoreBoard({ score }) {
         <h1>Rock</h1>
         <h1>Paper</h1>
         <h1>Scissors</h1>
+        <h1>Lizard</h1>
+        <h1>Spock</h1>
       </div>
       <div className="bg-white h-full p-10 border-0 rounded-lg flex flex-col justify-center items-center">
         <p className="text-xl text-center text-blue-700 font-bold tracking-wider uppercase">
