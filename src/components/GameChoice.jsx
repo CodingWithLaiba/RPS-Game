@@ -3,19 +3,17 @@ export default function GameChoice({ type, icon, borderColor, onSelect }) {
     <button
       onClick={() => onSelect(type)}
       className={`
-        w-32 h-32
-        rounded-full
-        ${borderColor}
-        border-14
-        flex items-center justify-center
-        shadow-lg
-        cursor-pointer
-        transition-transform duration-200
-        hover:scale-105
+        w-24 h-24
+    rounded-full
+    border-[10px]
+    ${borderColor}
+    bg-white
+    flex items-center justify-center
+    hover:scale-105
       `}
     >
-      <div className="w-25 h-25 rounded-full bg-white flex items-center justify-center shadow-inner">
-        <img src={icon} alt={type} className="w-12 h-12 object-contain" />
+      <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+        <img src={icon} alt={type} className="w-8 h-8 object-contain" />
       </div>
     </button>
   );
