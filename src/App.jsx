@@ -1,7 +1,8 @@
 // import { useState } from 'react'
+import { useState } from "react";
 import GameBoard from "./components/GameBoard";
 import ScoreBoard from "./components/ScoreBoard";
-
+const [selectedchoice, setSelectedChoice] = useState(null);
 function App() {
   return (
     <>
@@ -9,7 +10,7 @@ function App() {
         <ScoreBoard score={12} />
       </div>
       <div className="flex justify-center mt-20">
-        <GameBoard />
+        <GameBoard onSelect={setSelectedChoice}/>
       </div>
     </>
   );
