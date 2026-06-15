@@ -46,25 +46,34 @@ export default function GameBoard() {
   ];
 
   return (
-    <div className="relative w-full max-w-[600px] h-[420px] mx-auto">
-      <img
-        src={pentagon}
-        alt="pentagon"
-        className="absolute top-1/2 left-1/2 w-[260px] md:w-[320px] -translate-x-1/2 -translate-y-1/2"
-      />
+    <div className="relative w-[500px] h-[500px] mx-auto">
+  
+  <img
+    src={pentagon}
+    alt="pentagon"
+    className="
+      absolute
+      top-1/2
+      left-1/2
+      w-[380px]
+      -translate-x-1/2
+      -translate-y-1/2
+    "
+  />
 
-      <div className="relative z-10 grid grid-cols-3 grid-rows-3 h-full place-items-center">
-        {choices.map((choice) => (
-          <div key={choice.type} className={choice.grid}>
-            <GameChoice
-              type={choice.type}
-              icon={choice.icon}
-              borderColor={choice.borderColor}
-              onSelect={handleSelect}
-            />
-          </div>
-        ))}
-      </div>
+  {choices.map((choice) => (
+    <div
+      key={choice.type}
+      className={`absolute ${choice.position}`}
+    >
+      <GameChoice
+        type={choice.type}
+        icon={choice.icon}
+        borderColor={choice.borderColor}
+        onSelect={handleSelect}
+      />
     </div>
+  ))}
+</div>
   );
 }
