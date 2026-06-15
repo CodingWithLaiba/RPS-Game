@@ -7,11 +7,10 @@ import pentagon from "../assets/images/bg-pentagon.svg";
 
 import GameChoice from "./GameChoice";
 
-export default function GameBoard({ onSelect }){
-  const handleSelect = (choice) => {
-    onSelect(choice);
+export default function GameBoard({ onSelect }) {
+  const handleSelect = (choiceData) => {
+    onSelect(choiceData);
   };
-
   const choices = [
     {
       type: "scissors",
@@ -66,7 +65,7 @@ export default function GameBoard({ onSelect }){
             type={choice.type}
             icon={choice.icon}
             borderColor={choice.borderColor}
-            onSelect={handleSelect}
+            onSelect={() => handleSelect(choice)}
           />
         </div>
       ))}
