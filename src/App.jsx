@@ -12,6 +12,7 @@ import BattleScreen from "./components/BattelSceern";
 function App() {
   const [selectedChoice, setSelectedChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
+  const [result, setResult] = useState(null);
   const handleChoiceSelect = (choice) => {
     setSelectedChoice(choice);
 
@@ -19,6 +20,14 @@ function App() {
       const randomChoice = choices[Math.floor(Math.random() * choices.length)];
 
       setComputerChoice(randomChoice);
+
+      if (choice.type === randomChoice.type) {
+        setResult("DRAW");
+      } else if (rules[choice.type].includes(randomChoice.type)) {
+        setResult("YOU WIN");
+      } else {
+        setResult("YOU LOSE");
+      }
     }, 1000);
   };
   const choices = [
@@ -48,6 +57,13 @@ function App() {
       borderColor: "border-cyan-500",
     },
   ];
+  const rules = {
+    scissors: ["paper", "lizard"],
+    paper: ["rock", "spock"],
+    rock: ["lizard", "scissors"],
+    lizard: ["spock", "paper"],
+    spock: ["scissors", "rock"],
+  };
   return (
     <>
       <div className="">
@@ -60,6 +76,7 @@ function App() {
           <BattleScreen
             selectedChoice={selectedChoice}
             computerChoice={computerChoice}
+            result={result}
           />
         )}
       </div>
