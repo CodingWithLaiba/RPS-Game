@@ -7,9 +7,9 @@ import pentagon from "../assets/images/bg-pentagon.svg";
 
 import GameChoice from "./GameChoice";
 
-export default function GameBoard() {
+export default function GameBoard({ onSelect }){
   const handleSelect = (choice) => {
-    console.log(choice);
+    onSelect(choice);
   };
 
   const choices = [
