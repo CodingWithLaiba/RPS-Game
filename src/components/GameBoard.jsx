@@ -50,13 +50,7 @@ export default function GameBoard() {
       <img
         src={pentagon}
         alt="pentagon"
-        className="absolute
-top-1/2
-left-1/2
-w-[260px]
-md:w-[320px]
--translate-x-1/2
--translate-y-1/2"
+        className="absolute top-1/2 left-1/2 w-[260px] md:w-[320px] -translate-x-1/2 -translate-y-1/2"
       />
 
       <div className="relative z-10 grid grid-cols-3 grid-rows-3 h-full place-items-center">
