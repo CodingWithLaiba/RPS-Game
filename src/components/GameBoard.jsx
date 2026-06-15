@@ -17,31 +17,31 @@ export default function GameBoard() {
       type: "scissors",
       icon: scissors,
       borderColor: "border-yellow-500",
-      grid: "col-start-2 row-start-1",
-    },
-    {
-      type: "spock",
-      icon: spock,
-      borderColor: "border-cyan-500",
-      grid: "col-start-1 row-start-2",
+      position: "top-0 left-1/2 -translate-x-1/2",
     },
     {
       type: "paper",
       icon: paper,
       borderColor: "border-blue-500",
-      grid: "col-start-3 row-start-2",
-    },
-    {
-      type: "lizard",
-      icon: lizard,
-      borderColor: "border-purple-500",
-      grid: "col-start-1 row-start-3",
+      position: "top-[110px] right-[20px]",
     },
     {
       type: "rock",
       icon: rock,
       borderColor: "border-red-500",
-      grid: "col-start-3 row-start-3",
+      position: "bottom-[20px] right-[80px]",
+    },
+    {
+      type: "lizard",
+      icon: lizard,
+      borderColor: "border-purple-500",
+      position: "bottom-[20px] left-[80px]",
+    },
+    {
+      type: "spock",
+      icon: spock,
+      borderColor: "border-cyan-500",
+      position: "top-[110px] left-[20px]",
     },
   ];
 
